@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* Dark background that complements section boxes but allows shadows to pop */
+    background-color: #0b101a;
 }
 
 /* =========================================
@@ -56,6 +58,14 @@ header#page-title {
     /* Soft, noticeable outline */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
     /* Soft, wide shadow for depth */
+    color: #e6edf5;
+    /* Off-white color for high contrast against dark background */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    /* Low-level text shadow to match aesthetics */
+    font-family: sans-serif;
+    /* Clean font for sections */
+    line-height: 1.6;
+    /* Improve readability for paragraphs */
 }
 
 /* =========================================

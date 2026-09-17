@@ -6,17 +6,81 @@ body {
     box-sizing: border-box;
 }
 
+/* =========================================
+   Page Header
+   Distinct from section blocks but complementary.
+   Uses a gradient background, large glowing text,
+   and spans the full width for a cinematic feel.
+   ========================================= */
 header#page-title {
+    text-align: center;
+    /* Center the title text */
+    padding: 60px 20px;
+    /* Generous top and bottom padding for presence */
+    background: linear-gradient(135deg, rgba(10, 14, 24, 0.95), rgba(25, 36, 58, 0.9));
+    /* Deep gradient to stand out from section backgrounds */
+    color: #ffffff;
+    /* White text for contrast */
+    font-size: 2.5rem;
+    /* Large, prominent text size */
+    font-family: sans-serif;
+    /* Clean font */
+    font-weight: bold;
+    border-bottom: 2px solid rgba(100, 150, 255, 0.3);
+    /* Subtle glowing bottom border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    /* Shadow to separate header from main content */
+    text-shadow: 0 0 15px rgba(120, 180, 255, 0.6);
+    /* Soft blue glow on the text to match a night/magic theme */
+    margin-bottom: 30px;
+    /* Space before the first section */
 }
 
-section#the-dream {
+
+/* =========================================
+   Section Block Container
+   Applies depth, rounded corners, and a dark 
+   complementary background for a night theme
+   ========================================= */
+.section-block {
+    padding: 40px;
+    /* Significant padding */
+    margin: 40px auto;
+    max-width: 800px;
+    /* Constrain width for readability */
+    background-color: rgba(15, 22, 35, 0.85);
+    /* Dark background complementing night sky */
+    border-radius: 16px;
+    /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Soft, noticeable outline */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    /* Soft, wide shadow for depth */
 }
 
-section#the-first-attempt {
+/* =========================================
+   Showcase Image
+   Centers the image and ensures smooth 
+   resizing fluid transitions
+   ========================================= */
+.showcase-image {
+    display: block;
+    margin: 0 auto 30px auto;
+    /* Horizontally centered, with bottom margin */
+    max-width: 100%;
+    /* Ensure it shrinks with the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    /* Slight rounding on image to match section */
+    /* Transition for fluid visual resizing if viewport changes */
+    transition: all 0.4s ease-in-out;
 }
 
-section#the-direction-forward {
-}
+section#the-dream {}
 
-div#call-to-action {
-}
+section#the-first-attempt {}
+
+section#the-direction-forward {}
+
+div#call-to-action {}

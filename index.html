@@ -65,7 +65,38 @@
                 </ul>
             </div>
         </section>
-        <section id="the-direction-forward" class="section-block"></section>
+        <section id="the-direction-forward" class="section-block">
+            <div class="image-comparison">
+                <img src="assets/garnet-rerender.png" alt="Next-Gen Garnet Rerender" class="showcase-image">
+            </div>
+            <p>Moving beyond the limitations of traditional super-resolution means abandoning simple pixel interpolation
+                in favor of true generative reconstruction. To eliminate the smoothed, painted-over artifacts and
+                smeared pixels introduced by GAN models, the next phase of Vivi's Dream transitions the entire workflow
+                into a generative pipeline powered by FLUX.1 [dev] within ComfyUI. Instead of guessing details from
+                corrupted low-resolution data, this architecture uses guided diffusion to rebuild each frame from the
+                ground up while strictly honoring the cinematic direction of the original cutscenes.</p>
+
+            <div class="specs-list">
+                <h3>Next-Gen Pipeline Architecture</h3>
+                <ul>
+                    <li><strong>Generative Engine (FLUX.1 [dev] via ComfyUI):</strong> Replaces legacy upscaling
+                        networks with a high-parameter diffusion model running inside a modular node graph, synthesizing
+                        realistic textures and volumetric light rather than stretching existing pixels.</li>
+                    <li><strong>Deterministic Geometry Control (ControlNet):</strong> Extracts depth maps, edge lines,
+                        and character silhouettes directly from the original PS1 frames, anchoring the generative model
+                        so camera perspective and character anatomy remain structurally identical without visual
+                        hallucination.</li>
+                    <li><strong>Aesthetic Accuracy (Custom LoRA Training):</strong> Integrates custom-trained Low-Rank
+                        Adaptation (LoRA) weights focused on Final Fantasy IX's distinct storybook aesthetic, precisely
+                        directing the synthesis of Vivi's coarse fabric weave, Alexandria’s weathered cobblestone, and
+                        stylized architectural proportions.</li>
+                    <li><strong>Temporal Coherence & Sequence Assembly (FFmpeg & Latent Blending):</strong> Sequences
+                        cutscene frames into batches with linked latent noise seeds and optical flow masking, using
+                        FFmpeg for pre-processing extraction and final high-bitrate master encoding to prevent
+                        inter-frame flickering.</li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <div id="call-to-action"></div>

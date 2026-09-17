@@ -40,6 +40,21 @@ header#page-title {
 
 
 /* =========================================
+   Section Titles
+   Light gold styling with a subtle shadow/glow
+   ========================================= */
+.section-title {
+    color: #ffffff;
+    /* White text to match the page header */
+    text-shadow: 0 0 15px rgba(120, 180, 255, 0.6);
+    /* Soft blue glow on the text matching the page header aesthetic */
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* =========================================
    Section Block Container
    Applies depth, rounded corners, and a dark 
    complementary background for a night theme

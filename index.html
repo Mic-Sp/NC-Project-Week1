@@ -22,7 +22,49 @@
                 revitalizing every frame so the story, atmosphere, and emotion feel just as vivid on modern displays as
                 they did the very first time we saw them.</p>
         </section>
-        <section id="the-first-attempt" class="section-block"></section>
+        <section id="the-first-attempt" class="section-block">
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/OFzxl3kdh3c?controls=0&mute=1&autoplay=1&loop=1&playlist=OFzxl3kdh3c&rel=0&playsinline=1&disablekb=1&iv_load_policy=3"
+                    title="Vivi's Dream - The First Attempt"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <p>The initial phase of the project tackled the FMVs through an automated super-resolution pipeline using a
+                custom-tuned Real-ESRGAN model. Raw cutscene video was demuxed into uncompressed frame sequences via
+                FFmpeg, passed through model weights optimized to suppress heavy 240p compression artifacts, and
+                reassembled with lossless audio. While this approach effectively suppressed macroblocking and aggressive
+                color banding, it quickly exposed the fundamental limits of traditional GAN-based upscalers: Real-ESRGAN
+                can only interpolate and smooth existing pixel clusters, incapable of inferring fine architectural
+                textures, fabric weaves, or cinematic lighting that never existed in the source renders. Ultimately, the
+                process gave scenes an unnatural, "painted-over" look while introducing distinct visual artifacts—most
+                notably smeared pixels, blurred micro-details, and temporal inconsistencies across the individual frames
+                and finalized video.</p>
+
+            <div class="specs-list">
+                <h3>Software Stack</h3>
+                <ul>
+                    <li><strong>Frame Demuxing & Assembly:</strong> FFmpeg (lossless image sequence extraction, color
+                        tagging, and audio mapping)</li>
+                    <li><strong>Upscaling Engine:</strong> Custom Real-ESRGAN architecture using fine-tuned model
+                        checkpoints</li>
+                    <li><strong>Inference Runtime:</strong> Python, PyTorch (CUDA-accelerated batch execution), and
+                        OpenCV</li>
+                    <li><strong>Encoding & Delivery:</strong> FFmpeg (NVENC H.265 / ProRes encoding for minimal
+                        generation loss)</li>
+                </ul>
+            </div>
+
+            <div class="specs-list">
+                <h3>Hardware Profile</h3>
+                <ul>
+                    <li><strong>Machine:</strong> Lenovo Legion Pro 7i Gen 10</li>
+                    <li><strong>Processor:</strong> Intel Core Ultra 9 275HX</li>
+                    <li><strong>GPU:</strong> NVIDIA GeForce RTX 5080 Laptop GPU (16GB GDDR7 VRAM)</li>
+                    <li><strong>System Memory:</strong> 32GB DDR5 RAM</li>
+                </ul>
+            </div>
+        </section>
         <section id="the-direction-forward" class="section-block"></section>
     </main>
 

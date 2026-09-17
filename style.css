@@ -89,6 +89,96 @@ header#page-title {
 
 section#the-dream {}
 
+/* =========================================
+   Specifications Lists
+   Styles the h3 headers and customizes the
+   bullet points for a modern, distinct look
+   ========================================= */
+.specs-list {
+    margin-top: 30px;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Subtle inner dark background */
+    border-radius: 12px;
+    border-left: 4px solid rgba(100, 150, 255, 0.6);
+    /* Left accent border */
+}
+
+.specs-list h3 {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 1.4rem;
+    text-shadow: 0 0 8px rgba(100, 150, 255, 0.5);
+    /* Glowing header text */
+    margin-bottom: 15px;
+}
+
+.specs-list ul {
+    list-style: none;
+    /* Remove default bullets */
+    padding-left: 0;
+    margin: 0;
+}
+
+.specs-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+    /* Space for custom bullet */
+}
+
+/* Custom bullet styling using pseudo-element */
+.specs-list li::before {
+    content: "•";
+    /* Bullet character */
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: rgba(100, 150, 255, 0.9);
+    /* Light blue colored bullet */
+    font-size: 1.5rem;
+    line-height: 1;
+    text-shadow: 0 0 5px rgba(100, 150, 255, 0.8);
+    /* Glow on bullet */
+}
+
+.specs-list strong {
+    color: #ffffff;
+    /* Make the keys pop */
+    font-weight: bold;
+}
+
+/* =========================================
+   Video Container
+   Prevents layout shift and matches aesthetics
+   ========================================= */
+.video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* Modern CSS to prevent layout shift before the iframe loads */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Placeholder background while loading */
+    border-radius: 8px;
+    /* Match the rounded corners of images */
+    margin-bottom: 30px;
+    /* Space between the video and the paragraph below */
+    overflow: hidden;
+    /* Ensures the iframe respects the container's border-radius */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    /* Deep shadow to match the section blocks */
+}
+
+.video-container iframe {
+    width: 100%;
+    /* Fill the container horizontally */
+    height: 100%;
+    /* Fill the container vertically (controlled by aspect-ratio) */
+    border: none;
+    /* Remove default iframe border */
+    display: block;
+    /* Remove baseline gap */
+}
+
 section#the-first-attempt {}
 
 section#the-direction-forward {}

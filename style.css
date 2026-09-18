@@ -102,7 +102,6 @@ header#page-title {
     transition: all 0.4s ease-in-out;
 }
 
-section#the-dream {}
 
 /* =========================================
    Specifications Lists
@@ -193,11 +192,6 @@ section#the-dream {}
     display: block;
     /* Remove baseline gap */
 }
-
-
-section#the-first-attempt {}
-
-section#the-direction-forward {}
 
 /* =========================================
    Call to Action Container
